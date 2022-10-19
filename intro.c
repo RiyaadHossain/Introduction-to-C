@@ -2,8 +2,8 @@
 
 # include <stdio.h>
 int main() {
-   printf("Hello, World!");
+   char star = '*';
+   printf("Hello, World! - %c", star);
    return 0;
 }
-
 
