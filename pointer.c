@@ -6,11 +6,12 @@ int main(){
     int *ptr = &age;
     int _age = *ptr;
 
-    printf("%d \n", age);
-    printf("%p \n", &age);
-    printf("%p \n", ptr);
-    printf("%p \n", *ptr);
-    printf("%p \n", _age);
+    printf(" age: %d \n", age);
+    printf(" &age: %p \n", &age);
+    printf(" ptr: %p \n", ptr);
+    printf(" *(&age): %p \n", *(&age));
+    printf(" *ptr: %p \n", *ptr);
+    printf(" _age: %p \n", _age);
 
     return 0;
 }
