@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 int sum(int a);
+void printHW(int q);
 
 int main(){
-    printf("sum is: %d", sum(5));
+    printf("sum is: %d \n", sum(5));
+    printHW(4);
     return 0;
 }
 
@@ -14,4 +16,9 @@ int sum(int a){
     return sum(a - 1) * a;
 }
 
-// 15
+void printHW(int q){
+    if(q == 0)
+        return;
+    printf("hello World\n");
+    printHW(q - 1);
+}
