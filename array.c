@@ -66,25 +66,29 @@ void reverse(int arr[], int n)
 #include <stdio.h>
 
 void printTable(int arr[][10], int m, int number);
+void largestNum(int arr[], int len);
 
 int main()
 {
 
     int tableTwo[2][10];
+    int arr[5] = {1, 25, 3, 4, 5};
 
     printTable(tableTwo, 0, 2);
     printTable(tableTwo, 1, 3);
 
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d \t", tableTwo[0][i]);
-    }
-    printf("\n");
+    // for (int i = 0; i < 10; i++)
+    // {
+    //     printf("%d \t", tableTwo[0][i]);
+    // }
+    // printf("\n");
 
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d \t", tableTwo[1][i]);
-    }
+    // for (int i = 0; i < 10; i++)
+    // {
+    //     printf("%d \t", tableTwo[1][i]);
+    // }
+
+    largestNum(arr, 5);
     return 0;
 }
 
@@ -94,4 +98,14 @@ void printTable(int arr[][10], int n, int number)
     {
         arr[n][i] = number * (i + 1);
     }
+}
+
+void largestNum(int arr[], int len){
+    int large = arr[1];
+    for (int i = 0; i < len; i++){
+        if(arr[i] > large){
+            large = arr[i];
+        }
+    }
+    printf("Largest Num: %d", large);
 }
